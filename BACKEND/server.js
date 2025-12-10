@@ -74,7 +74,7 @@ app.use('/api/tests', labtestRoutes);
 // });
 
 
-app.listen(process.env.PORT || 5000, () => console.log('Server running'));
+app.listen(process.env.PORT || 5000, () => console.log('Server running at port 5000'));
 
 
 
