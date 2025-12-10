@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Consultation Report</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #1a1a1a;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 5px;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Consultation Report</h1>
+
+  <div class="section">
+    <div><span class="label">Consultation ID:</span> <%= consultation._id %></div>
+    <div><span class="label">Date:</span> <%= new Date(consultation.consultationDate).toLocaleString() %></div>
+  </div>
+
+  <div class="section">
+    <div><span class="label">Doctor:</span> <%= consultation.doctor?.name || 'N/A' %></div>
+    <div><span class="label">Patient:</span> <%= consultation.patient?.name || 'N/A' %></div>
+    <div><span class="label">Clinic:</span> <%= consultation.clinic?.name || 'N/A' %></div>
+  </div>
+
+  <div class="section">
+    <div><span class="label">Type:</span> <%= consultation.type || 'N/A' %></div>
+    <div><span class="label">Status:</span> <%= consultation.status || 'N/A' %></div>
+  </div>
+
+  <% if (consultation.notes) { %>
+    <div class="section">
+      <span class="label">Notes:</span>
+      <p><%= consultation.notes %></p>
+    </div>
+  <% } %>
+</body>
+</html>

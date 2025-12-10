@@ -1,0 +1,187 @@
+General styling
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+/* Sub-navbar */
+.sub-navbar {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px;
+  background-color: #f0f0f0;
+  flex-wrap: wrap;
+}
+
+.sub-navbar button {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sub-navbar button:hover {
+  background-color: #0056b3;
+}
+
+/* Search + Select container */
+.search-select-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.search-select-container input,
+.search-select-container select {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+/* Clinic cards grid */
+.clinic-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.clinic-card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  background-color: white;
+}
+
+.clinic-card:hover {
+  transform: scale(1.02);
+}
+
+/* Text inside clinic cards */
+.clinic-card h3 {
+  margin: 0 0 10px 0;
+}
+
+.clinic-card p {
+  margin: 5px 0;
+}
+
+
+/* ---------------- MEDIA QUERIES ---------------- */
+
+/* Small devices (phones) */
+@media (max-width: 600px) {
+  .sub-navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .search-select-container {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .clinic-card {
+    width: 90%;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 991px) {
+  .clinic-card {
+    width: 45%;
+  }
+}
+
+/* Large screens */
+@media (min-width: 992px) {
+  .clinic-card {
+    width: 250px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* App.css or Home.css */
+
+@media (max-width: 639px) {
+  .clinic-card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 767px) {
+  .clinic-card {
+    width: 18rem; /* 72 in tailwind = 18rem */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .clinic-card {
+    width: 33.33%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .clinic-card {
+    width: 25%;
+  }
+}
+
+
+
+
+
+
+
+
+
+/* Home.css */
+
+/* Custom card hover effect */
+.clinic-card {
+  transition: transform 0.2s ease;
+}
+
+.clinic-card:hover {
+  transform: scale(1.02);
+}
+
+/* Custom responsive tweaks (if needed) */
+@media (max-width: 640px) {
+  .clinic-card {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .clinic-card {
+    font-size: 1rem;
+  }
+}
